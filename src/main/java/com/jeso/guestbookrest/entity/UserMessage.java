@@ -17,8 +17,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  *
@@ -37,14 +37,15 @@ public class UserMessage implements Serializable {
     private Integer id;
     
     @Size(max = 45)
+    @NotNull
     @Column(name = "user_author")
     private String userAuthor;
     
     @Size(max = 255)
+    @NotNull
     @Column(name = "message_text")
     private String messageText;
     
-    @DateTimeFormat(pattern="MM/dd/yyyy")
     @Column(name = "creation_date")
     @Temporal(TemporalType.TIMESTAMP)
     @JsonFormat(pattern="dd/MM/yyyy hh:mm")

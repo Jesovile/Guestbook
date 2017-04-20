@@ -61,24 +61,7 @@ public class UserMessageCommonServiceDefaultImplTest {
         List<UserMessage> result = service.getAllUserMessages();
         verify(dao, times(1)).getAll();
         assertNotNull(result);
-        
     }
-
-    /**
-     * Test of getUserMessagesByYearAndMonth method, of class UserMessageCommonServiceDefaultImpl.
-     */
-//    @Test
-//    public void testGetUserMessagesByYearAndMonth() {
-//        System.out.println("getUserMessagesByYearAndMonth");
-//        String year = "";
-//        String month = "";
-//        UserMessageCommonServiceDefaultImpl instance = new UserMessageCommonServiceDefaultImpl();
-//        List<UserMessage> expResult = null;
-//        List<UserMessage> result = instance.getUserMessagesByYearAndMonth(year, month);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
 
     /**
      * Test of addUserMessage method, of class UserMessageCommonServiceDefaultImpl.
@@ -87,7 +70,6 @@ public class UserMessageCommonServiceDefaultImplTest {
     public void testAddUserMessage() {
         System.out.println("addUserMessage");
         UserMessage userMessage = new UserMessage();
-        
         try{
             service.addUserMessage(userMessage);
             verify(dao, times(1)).addUserMessage(userMessage);
@@ -95,5 +77,4 @@ public class UserMessageCommonServiceDefaultImplTest {
             fail("Exception : " + e.getClass() + "\r\n" + e.getMessage());
         }
     }
-    
 }

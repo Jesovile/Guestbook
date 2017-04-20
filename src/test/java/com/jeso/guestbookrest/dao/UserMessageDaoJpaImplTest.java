@@ -89,23 +89,7 @@ public class UserMessageDaoJpaImplTest {
             fail("Exception : " + e.getClass() + "\r\n" + e.getMessage());
         }
     }
-
-//    /**
-//     * Test of getByYearAndMonth method, of class UserMessageDaoJpaImpl.
-//     */
-//    @Test
-//    public void testGetByYearAndMonth() {
-//        System.out.println("getByYearAndMonth");
-//        String year = "";
-//        String month = "";
-//        UserMessageDaoJpaImpl instance = new UserMessageDaoJpaImpl();
-//        List<UserMessage> expResult = null;
-//        List<UserMessage> result = instance.getByYearAndMonth(year, month);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+    
     /**
      * Test of getByAuthor method, of class UserMessageDaoJpaImpl.
      */
@@ -176,7 +160,7 @@ public class UserMessageDaoJpaImplTest {
             fail("Exception : " + e.getClass() + "\r\n" + e.getMessage());
         }
     }
-//
+
 //    /**
 //     * Test of update method, of class UserMessageDaoJpaImpl.
 //     */

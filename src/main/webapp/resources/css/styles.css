@@ -1,0 +1,25 @@
+body{
+	background-color:#fafafa;
+}
+
+.user_header{
+	background-color:#1591cf;
+	color:#fff;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#message:hover{
+	background-color:#fff;
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+#message{
+	border-left-color: #5ea7cc;
+    border-left-style: solid;
+    border-left-width: 7px;
+    padding: 10px 10px 0px;
+}
