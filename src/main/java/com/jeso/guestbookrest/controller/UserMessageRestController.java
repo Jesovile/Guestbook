@@ -46,7 +46,6 @@ public class UserMessageRestController {
         UserMessage userMessage = new UserMessage();
         userMessage.setUserAuthor(author);
         userMessage.setMessageText(messageText);
-        //TODO think about adding date
         service.addUserMessage(userMessage);
     }
     

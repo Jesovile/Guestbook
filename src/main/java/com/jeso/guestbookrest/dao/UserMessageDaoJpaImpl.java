@@ -45,7 +45,7 @@ public class UserMessageDaoJpaImpl implements UserMessageDao{
 
     @Override
     public List<UserMessage> getByAuthor(String userAuthor) {
-        Query query = em.createQuery("Select m From UserMessage m Where:author");
+        Query query = em.createQuery("Select m From UserMessage m Where userAuthor =:author");
         query.setParameter("author", userAuthor);
         List<UserMessage> result = query.getResultList();
         return result;
