@@ -9,14 +9,12 @@ import com.jeso.guestbookrest.entity.UserMessage;
 import java.util.List;
 
 /**
- *
+ * Interface of UserMessageCommonService
  * @author Jeso
  */
 
 public interface UserMessageCommonService {
     
     public List<UserMessage> getAllUserMessages();
-    public List<UserMessage> getUserMessagesByYearAndMonth(String year, String month);
     public void addUserMessage(UserMessage userMessage);
-    
 }

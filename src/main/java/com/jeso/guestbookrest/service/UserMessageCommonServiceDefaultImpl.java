@@ -13,7 +13,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *
+ * Default implementation of UserMessageCommonService
+ * It provides common UserMessage service for user
+ * It uses UserMessageDao methods for processing
  * @author Jeso
  */
 @Service
@@ -23,18 +25,20 @@ public class UserMessageCommonServiceDefaultImpl implements UserMessageCommonSer
     @Autowired
     private UserMessageDao dao;
 
+    /**
+     * Method for getting all UserMessages from database
+     * @return List containes all UserMessages
+     */
     @Override
     public List<UserMessage> getAllUserMessages() {
         List<UserMessage> result = dao.getAll();
         return result;
     }
 
-    //TODO implement it after implementation additional method in UserMessageDao
-    @Override
-    public List<UserMessage> getUserMessagesByYearAndMonth(String year, String month) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    /**
+     * Method for adding new UserMessage in database
+     * @param userMessage is new UserMessage from Controller or another component from Presentation Tier
+     */
     @Override
     public void addUserMessage(UserMessage userMessage) {
         dao.addUserMessage(userMessage);

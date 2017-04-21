@@ -2,6 +2,10 @@ body{
 	background-color:#fafafa;
 }
 
+.row{
+	margin-top: 20px;
+}
+
 .user_header{
 	background-color:#1591cf;
 	color:#fff;

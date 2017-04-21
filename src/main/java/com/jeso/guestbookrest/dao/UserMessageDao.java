@@ -9,14 +9,13 @@ import com.jeso.guestbookrest.entity.UserMessage;
 import java.util.List;
 
 /**
- *
+ * Interface of UserMessageDao
  * @author Jeso
  */
 public interface UserMessageDao {
     
     public List<UserMessage> getAll();
     public UserMessage getById(Integer messageId);
-    public List<UserMessage> getByYearAndMonth(String year, String month);
     public List<UserMessage> getByAuthor(String userAuthor);
     
     public void addUserMessage(UserMessage userMessage);

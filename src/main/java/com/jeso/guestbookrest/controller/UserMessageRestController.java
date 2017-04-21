@@ -16,7 +16,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
+ * Spring MVC Rest Controller implement user part of REST service for messages resources
+ * Default URL for access is "(host name>)/rest/v1/messages" where v1 is number of public API version
+ * By default Content-type is "application/json"
+ * Default marshalling library is com.fasterxml.jackson
+ * It uses UserMessageCommonService methods for processing
  * @author Jeso
  */
 
@@ -28,21 +32,25 @@ public class UserMessageRestController {
     @Autowired
     private UserMessageCommonService service;
     
+    /**
+     * Method for getting all messages by GET http-request
+     * @return JSON object containes representation of all UserMessages from database
+     */
     @RequestMapping(method = RequestMethod.GET)
     public List<UserMessage> getAllMessages(){
         List<UserMessage> result = service.getAllUserMessages();
         return result;
     }
-    
-    //TODO implement it after additional method implementation in service
-    @RequestMapping(method = RequestMethod.GET, value = "/{year}/{month}")
-    public List<UserMessage> getMessagesByYearAndMonth(){
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+        
+    /**
+     * Method for adding new UserMessage in database by POST http-request with parameters
+     * Params are required. It prevents adding of empty messages
+     * @param author is the name of author. By default it's text from <input> element of form in index.jsp
+     * @param messageText is the text of message. By default it's text from <textarea> element of form in index.jsp
+     */
     @RequestMapping(method = RequestMethod.POST)
-    public void addUserMessage(@RequestParam("author") String author, 
-                               @RequestParam("messageText") String messageText){
+    public void addUserMessage(@RequestParam(name = "author", required = true) String author, 
+                               @RequestParam(name = "messageText", required = true) String messageText){
         UserMessage userMessage = new UserMessage();
         userMessage.setUserAuthor(author);
         userMessage.setMessageText(messageText);

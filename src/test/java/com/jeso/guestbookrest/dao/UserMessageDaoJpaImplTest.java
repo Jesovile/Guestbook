@@ -129,6 +129,8 @@ public class UserMessageDaoJpaImplTest {
     public void testAddUserMessage() {
         System.out.println("addUserMessage");
         UserMessage userMessage = new UserMessage();
+        userMessage.setUserAuthor("example");
+        userMessage.setMessageText("empty");
         
         try{
             int beforeSize = dao.getAll().size();
@@ -138,7 +140,6 @@ public class UserMessageDaoJpaImplTest {
         }catch (Exception e){
             fail("Exception : " + e.getClass() + "\r\n" + e.getMessage());
         }
-        
     }
 
     /**
@@ -161,19 +162,6 @@ public class UserMessageDaoJpaImplTest {
         }
     }
 
-//    /**
-//     * Test of update method, of class UserMessageDaoJpaImpl.
-//     */
-//    @Test
-//    public void testUpdate() {
-//        System.out.println("update");
-//        UserMessage userMessage = null;
-//        UserMessageDaoJpaImpl instance = new UserMessageDaoJpaImpl();
-//        instance.update(userMessage);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-    
     //TODO this logic is heavy. Consider this. Maybe it's unnecessary.
     //Checking by messageId for message is contained in database
     private boolean idChecking(Integer messageId){
