@@ -8,10 +8,6 @@ package com.jeso.guestbookrest.service;
 import com.jeso.guestbookrest.dao.UserMessageDao;
 import com.jeso.guestbookrest.entity.UserMessage;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
@@ -36,22 +32,6 @@ public class UserMessageCommonServiceDefaultImplTest {
     public UserMessageCommonServiceDefaultImplTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
     /**
      * Test of getAllUserMessages method, of class UserMessageCommonServiceDefaultImpl.
      */
@@ -70,11 +50,7 @@ public class UserMessageCommonServiceDefaultImplTest {
     public void testAddUserMessage() {
         System.out.println("addUserMessage");
         UserMessage userMessage = new UserMessage();
-        try{
-            service.addUserMessage(userMessage);
-            verify(dao, times(1)).addUserMessage(userMessage);
-        }catch (Exception e){
-            fail("Exception : " + e.getClass() + "\r\n" + e.getMessage());
-        }
+        service.addUserMessage(userMessage);
+        verify(dao, times(1)).addUserMessage(userMessage);
     }
 }
