@@ -6,6 +6,7 @@
 //global variables
 var contentDiv;
 var ajaxHostURL = 'http://localhost:8080/GuestbookRest';
+
         
 //start ajax-function after loading document
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -72,7 +73,11 @@ function submitButtonHandler(){
                 alert( "Sorry, error during connection" ); 
             } 
             else {
-                alert("Your message is added. Thanks!");
+                //clean contentDiv before
+                while(contentDiv.firstChild){
+                    contentDiv.removeChild(contentDiv.firstChild);
+                }
+                //show new list of messages
                 getMessages();
             }
         }

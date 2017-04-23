@@ -29,7 +29,8 @@
 	<div class="container">
             
             <div class="row">
-                <form class="form-horizontal col-sm-6">
+                <!--TODO fix it later. This action works strange in IE-->
+                <form class="form-horizontal col-sm-6" action="javascript:submitButtonHandler()" >
                     <div class="form-group">
                         <label for="author" class="col-sm-2 control-label">Your name</label>
 			<div class="col-sm-10">
@@ -44,7 +45,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="button" onclick="submitButtonHandler()" class="btn btn-default">Send</button>
+                            <button type="submit" class="btn btn-default">Send</button>
                         </div>
                     </div>
                 </form>
