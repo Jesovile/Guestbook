@@ -2,7 +2,7 @@ INSERT INTO `gb_rest_db`.`user_message`
 (`user_author`,
 `message_text`)
 VALUES
-('Tester',
+('Jeso',
 'Testing message 1');
 
 INSERT INTO `gb_rest_db`.`user_message`
