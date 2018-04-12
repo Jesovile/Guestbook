@@ -15,7 +15,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Jeso Guestbook REST</title>
+        <title>Jeso Guestbook REST(test 2)</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <link href="${bootstrapCss}" rel="stylesheet"/>
         <link href="${userStylesCss}" rel="stylesheet"/>
