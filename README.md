@@ -1,4 +1,6 @@
 # Guestbook
+(It's my first app I've made by myself. It stays here by historical reasons)
+
 Simple guestbook based on REST, Bootstrap and Spring.
 
 This is a small web- single-page application. 
